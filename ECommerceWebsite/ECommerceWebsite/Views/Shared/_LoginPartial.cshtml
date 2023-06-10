@@ -1,0 +1,13 @@
+﻿@if (Session["loggedIn"] == null || (string)Session["loggedIn"] != "True")
+{
+    <ul class="nav navbar-nav navbar-right">
+        <li>@Html.ActionLink("Log in", "Login", "Home", routeValues: null, htmlAttributes: new { id = "loginLink" })</li>
+    </ul>
+}
+else
+{
+    <ul class="nav navbar-nav navbar-right">
+        <li>@Html.ActionLink("Log out", "Logout", "Home", routeValues: null, htmlAttributes: new { id = "logoutLink" })</li>
+    </ul>
+}
+
